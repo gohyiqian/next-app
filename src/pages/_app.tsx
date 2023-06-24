@@ -8,5 +8,10 @@ export default function App({ Component, pageProps }: AppProps) {
   const { basePath } = router;
   console.log("basePath:", basePath);
   console.log("pageProps:", pageProps);
+  const path = (/#!(\/.*)$/.exec(router.asPath) || [])[1];
+  if (path) {
+    router.replace(path);
+  }
+  console.log("path", path);
   return <Component {...pageProps} />;
 }

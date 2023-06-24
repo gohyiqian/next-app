@@ -11,6 +11,7 @@ const nextConfig = {
     unoptimized: true,
   },
   // output: "standalone",
+
   // redirect does not work for static export
   // async redirects() {
   //   return [
