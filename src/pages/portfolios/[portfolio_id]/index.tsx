@@ -1,9 +1,11 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
+import { useRouter } from "next/router";
 
 const inter = Inter({ subsets: ["latin"] });
 
 const PortfolioItem = () => {
+  const router = useRouter();
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
@@ -17,6 +19,7 @@ const PortfolioItem = () => {
             </code>
           </Link>
         </p>
+        <p>Post: {router.query.id}</p>
       </div>
     </main>
   );

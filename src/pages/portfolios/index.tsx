@@ -1,9 +1,32 @@
 import { Inter } from "next/font/google";
 import Link from "next/link";
+// import type { InferGetServerSidePropsType, GetServerSideProps } from "next";
 
 const inter = Inter({ subsets: ["latin"] });
 
+// type ProductType = {
+//   id: number;
+//   title: string;
+//   price: number;
+//   description: string;
+//   category: string;
+//   image: string;
+//   rating: object;
+// };
+
+// export const getServerSideProps: GetServerSideProps<{
+//   allProducts: ProductType[];
+// }> = async () => {
+//   const res = await fetch("https://fakestoreapi.com/products/");
+//   const allProducts = await res.json();
+//   return { props: { allProducts } };
+// };
+
 export default function Portfolio() {
+//   {
+//   allProducts,
+// }: InferGetServerSidePropsType<typeof getServerSideProps>
+  // console.log("allProducts", allProducts);
   return (
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
